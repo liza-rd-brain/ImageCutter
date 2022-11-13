@@ -31,11 +31,32 @@ export const CanvasPaint = (props: any) => {
   }, []);
 
   const createCanvas = () => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current as HTMLCanvasElement;
     const context = canvas?.getContext("2d") as CanvasRenderingContext2D;
     context.lineWidth = 0.5;
     context.strokeStyle = "#fcab2a";
     contextRef.current = context;
+
+    var sourceX = 150;
+    var sourceY = 0;
+    var sourceWidth = 150;
+    var sourceHeight = 150;
+    var destWidth = sourceWidth;
+    var destHeight = sourceHeight;
+    var destX = canvas.width / 2 - destWidth / 2;
+    var destY = canvas.height / 2 - destHeight / 2;
+
+    context.drawImage(
+      imageObj,
+      sourceX,
+      sourceY,
+      sourceWidth,
+      sourceHeight,
+      destX,
+      destY,
+      destWidth,
+      destHeight
+    );
   };
 
   const startDrawing = ({ nativeEvent }: { nativeEvent: any }) => {

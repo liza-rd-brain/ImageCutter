@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { CanvasPaint } from "./component/CanvasPaint";
+import { KonvaExample } from "./konva/KonvaExample";
 
 /* import { SWGDrawer } from "./test_svg/SWGDrawer"; */
 
@@ -15,6 +16,7 @@ const ContainerWrapper = styled.div`
 function App() {
   return (
     <ContainerWrapper>
+      {/* <KonvaExample /> */}
       <CanvasPaint />
       {/* <SWGDrawer /> */}
     </ContainerWrapper>
