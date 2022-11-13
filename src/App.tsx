@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { Canvas } from "./component/Canvas";
+
 import { CanvasPaint } from "./component/CanvasPaint";
-import { ImageComponent } from "./component/ImageComponent";
+
+/* import { SWGDrawer } from "./test_svg/SWGDrawer"; */
 
 const ContainerWrapper = styled.div`
   width: 100%;
@@ -14,9 +15,8 @@ const ContainerWrapper = styled.div`
 function App() {
   return (
     <ContainerWrapper>
-      {/* <Canvas /> */}
       <CanvasPaint />
-      {/*  <ImageComponent /> */}
+      {/* <SWGDrawer /> */}
     </ContainerWrapper>
   );
 }
